@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So Lucky Motel | Self-Contained Rooms in Quiet Nkozi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary-red: #e63939;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #e63939;
+            transform: translateY(-2px);
+        }
+
+        .room-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .room-card:hover {
+            transform: scale(1.05) translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #e63939;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="tail-container text-gray-800 overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl font-bold logo-font">SL</div>
+                <div>
+                    <span class="text-3xl font-bold tracking-tight logo-font text-red-600">SO LUCKY</span>
+                    <span class="text-3xl font-bold tracking-tight logo-font text-gray-800 block -mt-1">MOTEL</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-10 text-lg font-medium">
+                <a href="#home" class="nav-link text-gray-700 hover:text-red-600">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-red-600">About</a>
+                <a href="#rooms" class="nav-link text-gray-700 hover:text-red-600">Rooms</a>
+                <a href="#location" class="nav-link text-gray-700 hover:text-red-600">Location</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-red-600">Contact</a>
+            </div>
+
+            <!-- WhatsApp & Book Now -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/256789024651" target="_blank" 
+                   class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <a href="#contact" 
+                   class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-all">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Hamburger -->
+            <button id="hamburger" class="md:hidden text-3xl text-gray-700 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-8 flex flex-col gap-6 text-xl font-medium">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#rooms" class="nav-link">Our Rooms</a>
+                <a href="#location" class="nav-link">Location</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://wa.me/256789024651" target="_blank" 
+                   class="flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-2xl justify-center font-semibold">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <p class="inline-block bg-white/20 backdrop-blur-md text-sm font-medium tracking-widest px-6 py-2 rounded-full mb-6">NKOZI • UGANDA</p>
+                <h1 class="text-6xl md:text-7xl font-bold logo-font leading-none tracking-tighter mb-6">
+                    SO LUCKY<br>MOTEL
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-10">"Self-contained rooms in a quiet environment"</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#rooms" 
+                       class="bg-white text-red-600 hover:bg-gray-100 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
+                        <i class="fas fa-bed"></i>
+                        View Rooms
+                    </a>
+                    <a href="https://wa.me/256789024651?text=Hello%20So%20Lucky%20Motel%2C%20I%20would%20like%20to%20book%20a%20room" 
+                       target="_blank"
+                       class="bg-green-500 hover:bg-green-600 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
+                        <i class="fab fa-whatsapp"></i>
+                        Book via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="mt-16 flex justify-center gap-12 text-sm">
+                    <div class="text-center">
+                        <i class="fas fa-wifi text-3xl mb-2"></i>
+                        <p>Free WiFi</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-car text-3xl mb-2"></i>
+                        <p>Secure Parking</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-3xl mb-2"></i>
+                        <p>24/7 Security</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+            <div class="text-xs tracking-widest mb-3 opacity-75">SCROLL TO EXPLORE</div>
+            <div class="w-px h-16 bg-white/50"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1.5 bg-red-100 text-red-600 text-sm font-semibold rounded-full mb-6">EST. 2024 • NKOZI</div>
+                    <h2 class="text-5xl font-bold logo-font leading-none tracking-tight mb-8">
+                        Your peaceful retreat<br>opposite the Faculty of Agriculture
+                    </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Nestled in the tranquil town of Nkozi, So Lucky Motel offers modern self-contained rooms just opposite the Faculty of Agriculture at Uganda Martyrs University. 
+                        Whether you're a student, lecturer, visitor, or traveler passing through Mpigi District, we provide the perfect balance of comfort, convenience, and quiet.
+                    </p>
+                    <div class="flex items-center gap-8">
+                        <div>
+                            <div class="text-4xl font-bold text-red-600">20+</div>
+                            <div class="text-sm text-gray-500">Self-contained rooms</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-red-600">5 min</div>
+                            <div class="text-sm text-gray-500">to University Campus</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-red-600">100%</div>
+                            <div class="text-sm text-gray-500">Guest satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sign image placeholder - replace src with your actual photo -->
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1015/800/600" alt="So Lucky Motel Sign" 
+                         class="rounded-3xl shadow-2xl w-full object-cover">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl max-w-[220px]">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-4xl">🌿</div>
+                            <div>
+                                <div class="font-semibold">Quiet Environment</div>
+                                <div class="text-sm text-gray-500">Surrounded by nature</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section id="rooms" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-red-600 font-semibold tracking-widest">ACCOMMODATION</span>
+                <h2 class="text-5xl font-bold logo-font mt-3">Self-Contained Rooms</h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-md mx-auto">Clean, comfortable, and private – perfect for restful nights</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Standard Single</h3>
+                                <p class="text-green-600 font-medium">UGX 45,000 / night</p>
+                            </div>
+                            <span class="px-4 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">1 Guest</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> En-suite bathroom with hot shower</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Queen bed • WiFi • TV</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Work desk • Mosquito net</li>
+                        </ul>
+                        <a href="https://wa.me/256789024651?text=I%20want%20to%20book%20a%20Standard%20Single%20room" target="_blank"
+                           class="mt-8 block w-full text-center bg-red-600 hover:bg-red-700 text-white py-4 rounded-2xl font-semibold transition-all">
+                            Book on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden shadow-xl ring-2 ring-red-500">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/251/800/600')"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Deluxe Double</h3>
+                                <p class="text-green-600 font-medium">UGX 65,000 / night</p>
+                            </div>
+                            <span class="px-4 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">2 Guests</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> King bed • Private balcony</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> En-suite bathroom • Mini fridge</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Air conditioning • Smart TV</li>
+                        </ul>
+                        <a href="https://wa.me/256789024651?text=I%20want%20to%20book%20a%20Deluxe%20Double%20room" target="_blank"
+                           class="mt-8 block w-full text-center bg-red-600 hover:bg-red-700 text-white py-4 rounded-2xl font-semibold transition-all">
+                            Book on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/133/800/600')"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Family Suite</h3>
+                                <p class="text-green-600 font-medium">UGX 95,000 / night</p>
+                            </div>
+                            <span class="px-4 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">4 Guests</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Two bedrooms • Living area</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Full bathroom • Kitchenette</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Sofa bed • Extra space</li>
+                        </ul>
+                        <a href="https://wa.me/256789024651?text=I%20want%20to%20book%20a%20Family%20Suite" target="_blank"
+                           class="mt-8 block w-full text-center bg-red-600 hover:bg-red-700 text-white py-4 rounded-2xl font-semibold transition-all">
+                            Book on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-bold logo-font mb-10">Everything you need for a perfect stay</h2>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="flex gap-4">
+                            <i class="fas fa-wifi text-4xl text-red-500"></i>
+                            <div>
+                                <div class="font-semibold">High-speed WiFi</div>
+                                <div class="text-sm text-gray-500">Stay connected</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-car text-4xl text-red-500"></i>
+                            <div>
+                                <div class="font-semibold">Free Parking</div>
+                                <div class="text-sm text-gray-500">Secure &amp; spacious</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-shower text-4xl text-red-500"></i>
+                            <div>
+                                <div class="font-semibold">Hot Water</div>
+                                <div class="text-sm text-gray-500">24/7 availability</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-lock text-4xl text-red-500"></i>
+                            <div>
+                                <div class="font-semibold">24/7 Security</div>
+                                <div class="text-sm text-gray-500">Gated compound</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-3xl">
+                    <div class="text-sm uppercase tracking-widest text-red-600 font-medium mb-4">Why guests love us</div>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="text-5xl">🌳</div>
+                            <div>
+                                <div class="font-semibold text-lg">Truly quiet location</div>
+                                <p class="text-gray-600">Away from the hustle of Kampala, yet only 5 minutes from the university.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl">👨‍👩‍👧</div>
+                            <div>
+                                <div class="font-semibold text-lg">Family &amp; student friendly</div>
+                                <p class="text-gray-600">Ideal for visiting parents, lecturers, and long-term academic stays.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <span class="text-red-400 font-semibold tracking-widest">FIND US</span>
+                    <h2 class="text-5xl font-bold logo-font mt-3 leading-none">Nkozi • Opposite Faculty of Agriculture</h2>
+                    <p class="mt-8 text-xl text-gray-300 leading-relaxed">
+                        So Lucky Motel is conveniently located in Nkozi, Mpigi District, directly opposite the Faculty of Agriculture at Uganda Martyrs University.
+                    </p>
+                    <div class="mt-12 space-y-6">
+                        <div class="flex items-start gap-6">
+                            <i class="fas fa-map-marker-alt text-4xl text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Physical Address</div>
+                                <div class="text-gray-400">Nkozi, Mpigi District<br>Opposite Faculty of Agriculture, Uganda Martyrs University</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <i class="fas fa-phone text-4xl text-red-500"></i>
+                            <div>
+                                <a href="tel:+256789024651" class="font-semibold text-2xl hover:text-red-400">+256 789 024 651</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <i class="fas fa-envelope text-4xl text-red-500"></i>
+                            <div>
+                                <a href="mailto:mulengezisammy@gmail.com" class="font-semibold hover:text-red-400">mulengezisammy@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.0000000000005!2d32.014444!3d0.003611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMDDCsDAwJzEzLjAiTiAzMsKwMDAnNTIuMCJF!5e0!3m2!1sen!2sug!4v1700000000000"
+                        width="100%" 
+                        height="480" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold logo-font">Get in Touch</h2>
+                <p class="text-gray-600 mt-4">We reply within minutes on WhatsApp</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Form -->
+                <form action="https://formspree.io/f/your-email-here" method="POST" class="space-y-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Full Name</label>
+                        <input type="text" name="name" required
+                               class="w-full px-6 py-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Phone / WhatsApp</label>
+                            <input type="tel" name="phone" required
+                                   class="w-full px-6 py-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" name="email"
+                                   class="w-full px-6 py-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message / Booking Request</label>
+                        <textarea name="message" rows="6" required placeholder="Check-in date, room type, number of guests..."
+                                  class="w-full px-6 py-5 border border-gray-300 rounded-3xl focus:outline-none focus:border-red-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-red-600 hover:bg-red-700 text-white py-6 rounded-2xl font-semibold text-xl transition-all">
+                        SEND MESSAGE
+                    </button>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="space-y-12">
+                    <div>
+                        <div class="flex items-center gap-6 mb-8">
+                            <a href="https://wa.me/256789024651" target="_blank" 
+                               class="whatsapp-float flex-shrink-0 w-20 h-20 bg-green-500 hover:bg-green-600 rounded-3xl flex items-center justify-center text-white text-5xl shadow-xl">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <div>
+                                <div class="text-3xl font-bold">+256 789 024 651</div>
+                                <div class="text-green-600 font-semibold">WhatsApp • Call • Text</div>
+                                <div class="text-xs text-gray-500 mt-1">Instant replies</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-red-600 pl-8">
+                        <div class="text-2xl font-semibold mb-2">Email</div>
+                        <a href="mailto:mulengezisammy@gmail.com" class="text-xl text-red-600 hover:underline">mulengezisammy@gmail.com</a>
+                    </div>
+
+                    <div>
+                        <div class="uppercase text-xs tracking-widest text-gray-500 mb-4">We are open</div>
+                        <div class="space-y-2 text-lg">
+                            <div class="flex justify-between"><span>Check-in</span><span class="font-medium">From 12:00 PM</span></div>
+                            <div class="flex justify-between"><span>Check-out</span><span class="font-medium">Until 11:00 AM</span></div>
+                            <div class="flex justify-between"><span>Reception</span><span class="font-medium text-green-600">24 hours</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-2xl font-bold">SL</div>
+                        <span class="text-2xl font-bold logo-font">SO LUCKY MOTEL</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Self-contained comfort in the heart of Nkozi, Uganda.</p>
+                </div>
+                <div>
+                    <div class="font-semibold text-white mb-6">QUICK LINKS</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#about" class="block hover:text-white">About Us</a>
+                        <a href="#rooms" class="block hover:text-white">Rooms &amp; Rates</a>
+                        <a href="#location" class="block hover:text-white">How to Find Us</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-semibold text-white mb-6">CONTACT</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="tel:+256789024651" class="block hover:text-white">+256 789 024 651</a>
+                        <a href="mailto:mulengezisammy@gmail.com" class="block hover:text-white">mulengezisammy@gmail.com</a>
+                        <div>Nkozi, Mpigi District</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-semibold text-white mb-6">FOLLOW US</div>
+                    <div class="flex gap-6 text-3xl">
+                        <!-- Add your social links if any -->
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="mt-12 text-xs opacity-50">© 2026 So Lucky Motel. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/256789024651" target="_blank"
+       class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-50 text-4xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Tailwind script already loaded
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = hamburger.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        hamburger.querySelector('i').classList.add('fa-bars');
+                        hamburger.querySelector('i').classList.remove('fa-times');
+                    }
+                }
+            });
+        });
+
+        // Simple form success alert (replace with real backend if needed)
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // For demo only - remove in production or keep for Formspree
+                setTimeout(() => {
+                    alert("✅ Thank you! Your message has been sent. We'll reply on WhatsApp shortly.");
+                }, 800);
+            });
+        }
+
+        // Keyboard escape for mobile menu
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape" && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            }
+        });
+    </script>
+</body>
+</html>
