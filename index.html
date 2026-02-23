@@ -46,7 +46,7 @@
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
         }
 
-        .whatsapp-float {
+        .whatsapp-float, .call-float {
             animation: pulse 2s infinite;
         }
 
@@ -94,12 +94,18 @@
                 <a href="#contact" class="nav-link text-gray-700 hover:text-red-600">Contact</a>
             </div>
 
-            <!-- WhatsApp & Book Now -->
-            <div class="hidden md:flex items-center gap-4">
+            <!-- Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <!-- Direct Call Button -->
+                <a href="tel:+256789024651" 
+                   class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all">
+                    <i class="fas fa-phone text-xl"></i>
+                    <span>Call Now</span>
+                </a>
                 <a href="https://wa.me/256789024651" target="_blank" 
                    class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all">
                     <i class="fab fa-whatsapp text-2xl"></i>
-                    <span>Chat on WhatsApp</span>
+                    <span>WhatsApp</span>
                 </a>
                 <a href="#contact" 
                    class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-all">
@@ -121,11 +127,19 @@
                 <a href="#rooms" class="nav-link">Our Rooms</a>
                 <a href="#location" class="nav-link">Location</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="https://wa.me/256789024651" target="_blank" 
-                   class="flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-2xl justify-center font-semibold">
-                    <i class="fab fa-whatsapp text-3xl"></i>
-                    WhatsApp Us
-                </a>
+                
+                <div class="flex flex-col gap-3 pt-4 border-t">
+                    <a href="tel:+256789024651" 
+                       class="flex items-center justify-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold">
+                        <i class="fas fa-phone text-3xl"></i>
+                        Call Now
+                    </a>
+                    <a href="https://wa.me/256789024651" target="_blank" 
+                       class="flex items-center justify-center gap-3 bg-green-500 text-white px-8 py-4 rounded-2xl font-semibold">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -150,7 +164,12 @@
                        target="_blank"
                        class="bg-green-500 hover:bg-green-600 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
                         <i class="fab fa-whatsapp"></i>
-                        Book via WhatsApp
+                        WhatsApp
+                    </a>
+                    <a href="tel:+256789024651"
+                       class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3 transition-all">
+                        <i class="fas fa-phone"></i>
+                        Call Now
                     </a>
                 </div>
                 
@@ -178,7 +197,7 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT (unchanged) -->
     <section id="about" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -207,7 +226,6 @@
                     </div>
                 </div>
                 
-                <!-- Sign image placeholder - replace src with your actual photo -->
                 <div class="relative">
                     <img src="https://picsum.photos/id/1015/800/600" alt="So Lucky Motel Sign" 
                          class="rounded-3xl shadow-2xl w-full object-cover">
@@ -225,7 +243,7 @@
         </div>
     </section>
 
-    <!-- ROOMS -->
+    <!-- ROOMS (unchanged) -->
     <section id="rooms" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -235,7 +253,7 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Room 1 -->
+                <!-- Room cards same as before -->
                 <div class="room-card bg-white rounded-3xl overflow-hidden shadow-xl">
                     <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
                     <div class="p-8">
@@ -258,7 +276,6 @@
                     </div>
                 </div>
 
-                <!-- Room 2 -->
                 <div class="room-card bg-white rounded-3xl overflow-hidden shadow-xl ring-2 ring-red-500">
                     <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/251/800/600')"></div>
                     <div class="p-8">
@@ -281,7 +298,6 @@
                     </div>
                 </div>
 
-                <!-- Room 3 -->
                 <div class="room-card bg-white rounded-3xl overflow-hidden shadow-xl">
                     <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/133/800/600')"></div>
                     <div class="p-8">
@@ -307,7 +323,7 @@
         </div>
     </section>
 
-    <!-- AMENITIES -->
+    <!-- AMENITIES (unchanged) -->
     <section class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16">
@@ -367,7 +383,7 @@
         </div>
     </section>
 
-    <!-- LOCATION -->
+    <!-- LOCATION (unchanged) -->
     <section id="location" class="py-24 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16">
@@ -400,7 +416,6 @@
                     </div>
                 </div>
                 
-                <!-- Map -->
                 <div class="rounded-3xl overflow-hidden shadow-2xl">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.0000000000005!2d32.014444!3d0.003611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMDDCsDAwJzEzLjAiTiAzMsKwMDAnNTIuMCJF!5e0!3m2!1sen!2sug!4v1700000000000"
@@ -415,72 +430,84 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
+    <!-- CONTACT - NOW MORE COMPACT -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-6"> <!-- Reduced max width for compactness -->
+            <div class="text-center mb-12">
                 <h2 class="text-5xl font-bold logo-font">Get in Touch</h2>
-                <p class="text-gray-600 mt-4">We reply within minutes on WhatsApp</p>
+                <p class="text-gray-600 mt-3">Instant replies on call or WhatsApp</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Form -->
-                <form action="https://formspree.io/f/your-email-here" method="POST" class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-8"> <!-- Reduced gap -->
+                <!-- Compact Form -->
+                <form action="https://formspree.io/f/your-email-here" method="POST" class="space-y-6">
                     <div>
-                        <label class="block text-sm font-medium mb-2">Full Name</label>
+                        <label class="block text-sm font-medium mb-1.5">Full Name</label>
                         <input type="text" name="name" required
-                               class="w-full px-6 py-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors">
+                               class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors text-base">
                     </div>
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-2 gap-4"> <!-- Smaller gap -->
                         <div>
-                            <label class="block text-sm font-medium mb-2">Phone / WhatsApp</label>
+                            <label class="block text-sm font-medium mb-1.5">Phone / WhatsApp</label>
                             <input type="tel" name="phone" required
-                                   class="w-full px-6 py-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors">
+                                   class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors text-base">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <label class="block text-sm font-medium mb-1.5">Email</label>
                             <input type="email" name="email"
-                                   class="w-full px-6 py-5 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors">
+                                   class="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-red-500 transition-colors text-base">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium mb-2">Message / Booking Request</label>
-                        <textarea name="message" rows="6" required placeholder="Check-in date, room type, number of guests..."
-                                  class="w-full px-6 py-5 border border-gray-300 rounded-3xl focus:outline-none focus:border-red-500 transition-colors"></textarea>
+                        <label class="block text-sm font-medium mb-1.5">Booking Request</label>
+                        <textarea name="message" rows="4" required placeholder="Check-in date, room type, guests..."
+                                  class="w-full px-5 py-4 border border-gray-300 rounded-3xl focus:outline-none focus:border-red-500 transition-colors text-base"></textarea>
                     </div>
                     <button type="submit"
-                            class="w-full bg-red-600 hover:bg-red-700 text-white py-6 rounded-2xl font-semibold text-xl transition-all">
+                            class="w-full bg-red-600 hover:bg-red-700 text-white py-5 rounded-2xl font-semibold text-lg transition-all">
                         SEND MESSAGE
                     </button>
                 </form>
 
-                <!-- Contact Info -->
-                <div class="space-y-12">
+                <!-- Compact Contact Info -->
+                <div class="space-y-8 pt-4 md:pt-0">
                     <div>
-                        <div class="flex items-center gap-6 mb-8">
-                            <a href="https://wa.me/256789024651" target="_blank" 
-                               class="whatsapp-float flex-shrink-0 w-20 h-20 bg-green-500 hover:bg-green-600 rounded-3xl flex items-center justify-center text-white text-5xl shadow-xl">
-                                <i class="fab fa-whatsapp"></i>
+                        <div class="flex items-center gap-5">
+                            <a href="tel:+256789024651" 
+                               class="call-float flex-shrink-0 w-16 h-16 bg-blue-600 hover:bg-blue-700 rounded-3xl flex items-center justify-center text-white text-4xl shadow-xl">
+                                <i class="fas fa-phone"></i>
                             </a>
                             <div>
                                 <div class="text-3xl font-bold">+256 789 024 651</div>
-                                <div class="text-green-600 font-semibold">WhatsApp • Call • Text</div>
-                                <div class="text-xs text-gray-500 mt-1">Instant replies</div>
+                                <div class="text-blue-600 font-semibold">Call • Direct</div>
+                                <div class="text-xs text-gray-500">Instant connection</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="border-l-4 border-red-600 pl-8">
-                        <div class="text-2xl font-semibold mb-2">Email</div>
-                        <a href="mailto:mulengezisammy@gmail.com" class="text-xl text-red-600 hover:underline">mulengezisammy@gmail.com</a>
+                    <div class="flex items-center gap-5">
+                        <a href="https://wa.me/256789024651" target="_blank" 
+                           class="whatsapp-float flex-shrink-0 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-3xl flex items-center justify-center text-white text-4xl shadow-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <div>
+                            <div class="text-3xl font-bold">+256 789 024 651</div>
+                            <div class="text-green-600 font-semibold">WhatsApp</div>
+                            <div class="text-xs text-gray-500">Fast replies</div>
+                        </div>
                     </div>
 
-                    <div>
-                        <div class="uppercase text-xs tracking-widest text-gray-500 mb-4">We are open</div>
-                        <div class="space-y-2 text-lg">
-                            <div class="flex justify-between"><span>Check-in</span><span class="font-medium">From 12:00 PM</span></div>
-                            <div class="flex justify-between"><span>Check-out</span><span class="font-medium">Until 11:00 AM</span></div>
-                            <div class="flex justify-between"><span>Reception</span><span class="font-medium text-green-600">24 hours</span></div>
+                    <div class="border-l-4 border-red-600 pl-6">
+                        <div class="font-medium text-lg">Email</div>
+                        <a href="mailto:mulengezisammy@gmail.com" class="text-red-600 hover:underline">mulengezisammy@gmail.com</a>
+                    </div>
+
+                    <div class="pt-4">
+                        <div class="uppercase text-xs tracking-widest text-gray-500 mb-3">Reception Hours</div>
+                        <div class="text-base space-y-1">
+                            <div class="flex justify-between"><span>Check-in</span><span class="font-medium">12:00 PM</span></div>
+                            <div class="flex justify-between"><span>Check-out</span><span class="font-medium">11:00 AM</span></div>
+                            <div class="flex justify-between"><span>24/7 Support</span><span class="font-medium text-green-600">Yes</span></div>
                         </div>
                     </div>
                 </div>
@@ -488,7 +515,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (unchanged) -->
     <footer class="bg-gray-900 text-gray-400 py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-10">
@@ -518,7 +545,6 @@
                 <div>
                     <div class="font-semibold text-white mb-6">FOLLOW US</div>
                     <div class="flex gap-6 text-3xl">
-                        <!-- Add your social links if any -->
                         <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -528,42 +554,40 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/256789024651" target="_blank"
-       class="whatsapp-float fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-50 text-4xl">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <!-- Direct Call Floating -->
+        <a href="tel:+256789024651" 
+           class="call-float w-16 h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl text-4xl">
+            <i class="fas fa-phone"></i>
+        </a>
+        <!-- WhatsApp Floating -->
+        <a href="https://wa.me/256789024651" target="_blank"
+           class="whatsapp-float w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl text-4xl">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script>
-        // Tailwind script already loaded
-        // Hamburger menu
+        // Hamburger
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
         
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             const icon = hamburger.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
 
-        // Smooth scrolling for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 if (this.getAttribute('href') === '#') return;
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
+                    target.scrollIntoView({ behavior: 'smooth' });
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                         hamburger.querySelector('i').classList.add('fa-bars');
@@ -573,25 +597,15 @@
             });
         });
 
-        // Simple form success alert (replace with real backend if needed)
+        // Form alert
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function(e) {
-                // For demo only - remove in production or keep for Formspree
                 setTimeout(() => {
-                    alert("✅ Thank you! Your message has been sent. We'll reply on WhatsApp shortly.");
-                }, 800);
+                    alert("✅ Message sent! We'll call or WhatsApp you shortly.");
+                }, 600);
             });
         }
-
-        // Keyboard escape for mobile menu
-        document.addEventListener('keydown', function(e) {
-            if (e.key === "Escape" && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                hamburger.querySelector('i').classList.add('fa-bars');
-                hamburger.querySelector('i').classList.remove('fa-times');
-            }
-        });
     </script>
 </body>
 </html>
